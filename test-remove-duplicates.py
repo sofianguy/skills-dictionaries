@@ -24,10 +24,4 @@ def remove_duplicates(words):
     return removed_list
 
 print remove_duplicates(["rose", "is", "a", "rose", "is", "a", "rose"])
-
-
-
-#     new_list = set(words)
-
-#     return new_list
-# print sorted(remove_duplicates(["rose", "is", "a", "rose", "is", "a", "rose"]))
+print remove_duplicates(["Rose", "is", "a", "rose", "is", "a", "rose"])

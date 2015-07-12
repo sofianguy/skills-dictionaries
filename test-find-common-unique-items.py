@@ -20,7 +20,6 @@ def find_unique_common_items(list1, list2):
 
     """
     common_dict = {}
-
     
 
 
@@ -29,6 +28,7 @@ def find_unique_common_items(list1, list2):
 
 
 
+#SOLUTION WITHOUT USING DICTIONARY
 #     combined_list = set(list1)&set(list2)
 
 #     return combined_list
