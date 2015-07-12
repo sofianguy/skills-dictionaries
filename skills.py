@@ -198,8 +198,15 @@ def sort_by_word_length(words):
         [(1, ['a']), (2, ['ok', 'an']), (3, ['day']), (5, ['apple'])]
 
     """
+    words_dictionary = {}
+    for word in words:
+        x = len(word)
+        y = word
+        words_dictionary.setdefault(x, []).append(y)
+    words_dictionary = sorted(words_dictionary.items())
 
-    return []
+    return words_dictionary
+print sort_by_word_length(["ok", "an", "apple", "a", "day"])
 
 
 def get_pirate_talk(phrase):

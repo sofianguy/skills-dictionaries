@@ -12,21 +12,32 @@ def sort_by_word_length(words):
 
     """
 
-    sorted_list = []
+#ULTIMATE GOAL: 
+#the_tuple = (length, list_of_words_with_that_length)
+
+    words_dictionary = {}
     for word in words:
-    	sorted_list.append(len(word))
+    	x = len(word)
+    	y = word
+    	words_dictionary.setdefault(x, []).append(y)
+    words_dictionary = sorted(words_dictionary.items())
+
+    return words_dictionary
+print sort_by_word_length(["ok", "an", "apple", "a", "day"])
+
+
+
+#SCRATCH PAPER
+# sorted_list = []
+    # for word in words:
+    # 	sorted_list.append(len(word))
     #[2, 2, 5, 1, 3]
 
-    # a = sorted_list
+
+# a = sorted_list
     # b = word
     # sorted_list_tuple = (a,b)
     # print sorted_list_tuple
-#the_tuple = (length, list_of_words_with_that_length)
-	
-
-
-    return sorted_list
-print sort_by_word_length(["ok", "an", "apple", "a", "day"])
 
 
 #     sorted_list_tuple = ()
@@ -35,8 +46,3 @@ print sort_by_word_length(["ok", "an", "apple", "a", "day"])
 #     	sorted_list = tuple(len(word))
 #     	sorted_list_tuple = sorted_list_tuple + sorted_list
 #     	print sorted_list
-
-
-
-#     return sorted_list
-# print sort_by_word_length(["ok", "an", "apple", "a", "day"])
