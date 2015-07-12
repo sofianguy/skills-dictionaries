@@ -172,17 +172,12 @@ def encode(phrase):
         'You drp d bpduouful, odlpnopd, brulludno, powprful musk ox.'
     """
 
+    replacement_dict = {'e': 'p', 'a': 'd', 't': 'o', 'i': 'u'}
     new_phrase = ""
-
+    
     for letter in phrase:
-        if letter == "e":
-            new_phrase = new_phrase + "p"
-        elif letter == "a":
-            new_phrase = new_phrase + "d"
-        elif letter == "t":
-            new_phrase = new_phrase + "o"
-        elif letter == "i":
-            new_phrase = new_phrase + "i"
+        if letter in replacement_dict:
+            new_phrase = new_phrase + replacement_dict[letter]
         else:
             new_phrase = new_phrase + letter
 

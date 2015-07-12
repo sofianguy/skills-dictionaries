@@ -35,4 +35,4 @@ def count_unique(input_string):
 
     return count_unique_dict
 
-print count_unique("hello hello, world world. my name is sofia")
+print count_unique("rose is a rose is a rose")
