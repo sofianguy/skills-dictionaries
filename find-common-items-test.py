@@ -24,7 +24,11 @@ def find_common_items(list1, list2):
         [1, 1, 2, 2]
 
     """
-    combined_list = set(list1)&set(list2)
+    
 
-    return combined_list
-print sorted(find_common_items([1, 1, 2, 2], [1, 2, 3, 4]))
+
+
+#     combined_list = set(list1)&set(list2)
+
+#     return combined_list
+# print sorted(find_common_items([1, 1, 2, 2], [1, 2, 3, 4]))

@@ -28,8 +28,11 @@ def get_sum_zero_pairs(input_list):
 
     """
 
+    #add item to list if two values sum to zero
+    for number in input_list:
+        if 
 
-    
+
 
 
     return []

@@ -150,7 +150,15 @@ def remove_duplicates(words):
 
     """
 
-    return []
+    removed_list = []
+    for word in words:
+        if word not in removed_list:
+            removed_list.append(word)
+
+    return removed_list
+
+print remove_duplicates(["rose", "is", "a", "rose", "is", "a", "rose"])
+
 
 
 def encode(phrase):
