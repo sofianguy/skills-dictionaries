@@ -130,8 +130,20 @@ def get_sum_zero_pairs(input_list):
 
     """
 
-    return []
+    results_zero_list = []
+    list_to_set = set(input_list)
 
+    for num in list_to_set:
+        #if number is greater than 0, AND has same neg number
+        if num >= 0 and -num in list_to_set:
+            #if so, append pair of numbers to results_zero_list (in a list pair)
+            results_zero_list.append([-num, num])
+
+    return sorted(results_zero_list)
+print get_sum_zero_pairs([1, 2, 3, -2, -1])
+print get_sum_zero_pairs([3, -3, 2, 1, -2, -1])
+print get_sum_zero_pairs([1, 2, 3, -2, -1, 1, 1])
+print get_sum_zero_pairs([1, 2, 3, -2, -1, 1, 1, 0])
 
 def remove_duplicates(words):
     """Given a list of words, return the list with duplicates removed
