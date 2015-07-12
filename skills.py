@@ -96,6 +96,7 @@ def find_unique_common_items(list1, list2):
     combined_list = set(list1)&set(list2)
 
     return combined_list
+print sorted(find_unique_common_items([1, 2, 3, 4], [1, 2]))
 print sorted(find_unique_common_items([1, 2, 3, 4], [1, 1, 2, 2]))
 
 
@@ -156,8 +157,8 @@ def remove_duplicates(words):
             removed_list.append(word)
 
     return removed_list
-
 print remove_duplicates(["rose", "is", "a", "rose", "is", "a", "rose"])
+print remove_duplicates(["Rose", "is", "a", "rose", "is", "a", "rose"])
 
 
 
@@ -251,6 +252,13 @@ def get_pirate_talk(phrase):
         'me swabbie be not a man!'
 
     """
+
+    english_words = ['sir', 'hotel', 'student', 'boy', 'madam', 'professor', \
+    'restaurant', 'your', 'excuse', 'students', 'are', 'lawyer', 'the', 'restroom', \
+    'my', 'hello', 'is', 'man']
+    pirate_words = ['matey', 'fleabag inn', 'swabbie', 'matey', 'proud beauty', \
+    'foul blaggart', 'galley', 'yer', 'arr', 'swabbies', 'be', 'foul blaggart', "th'", \
+    'head', 'me', 'avast', 'be', 'matey']
 
     return ""
 
