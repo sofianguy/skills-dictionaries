@@ -93,11 +93,16 @@ def find_unique_common_items(list1, list2):
         [1, 2]
 
     """
-    combined_list = set(list1)&set(list2)
+    dict_for_zeros = {}
+    for item1 in list1:     #look at first item in list1
+        for item2 in list2:    #look at second item in list2
+            if item1 == item2:    #if the two items are the same...
+                dict_for_zeros[item1] = item1 #add item1 as key, item1 as value
 
-    return combined_list
-print sorted(find_unique_common_items([1, 2, 3, 4], [1, 2]))
-print sorted(find_unique_common_items([1, 2, 3, 4], [1, 1, 2, 2]))
+    return dict_for_zeros.keys()    #return keys from common_dict in a list
+print find_unique_common_items([1, 2, 3, 4], [1, 2])
+print find_unique_common_items([1, 2, 3, 4], [1, 1, 2, 2])
+
 
 
 def get_sum_zero_pairs(input_list):
