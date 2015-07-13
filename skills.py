@@ -272,7 +272,23 @@ def get_pirate_talk(phrase):
     'foul blaggart', 'galley', 'yer', 'arr', 'swabbies', 'be', 'foul blaggart', "th'", \
     'head', 'me', 'avast', 'be', 'matey']
 
-    return ""
+    eng_pir_dict = dict(zip(english_words, pirate_words))
+    phrase_list = phrase.split()
+
+    pirate_talk = phrase_list.pop(0)
+    if pirate_talk in eng_pir_dict:
+        pirate_talk = eng_pir_dict[pirate_talk]
+    
+    for word in phrase_list:
+        if word in eng_pir_dict:
+            pirate_talk = pirate_talk +  " " + eng_pir_dict[word]
+        else:
+            pirate_talk = pirate_talk + " " + word
+
+    return pirate_talk
+print get_pirate_talk("my student is not a man")
+print get_pirate_talk("my student is not a man!")
+
 
 # End of skills. See below for advanced problems.
 # To work on them, set ADVANCED=True at the top of this file.

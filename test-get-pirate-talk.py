@@ -46,18 +46,30 @@ def get_pirate_talk(phrase):
     pirate_words = ['matey', 'fleabag inn', 'swabbie', 'matey', 'proud beauty', \
     'foul blaggart', 'galley', 'yer', 'arr', 'swabbies', 'be', 'foul blaggart', "th'", \
     'head', 'me', 'avast', 'be', 'matey']
-
+# phrase = "my stduent is not a man"
     eng_pir_dict = dict(zip(english_words, pirate_words))
     phrase_list = phrase.split()
+    #phrase_list = ['my', 'student', 'is', 'not', 'a', 'man!']
 
-    pirate_talk = ""
+    pirate_talk = phrase_list.pop(0)
+    if pirate_talk in eng_pir_dict:
+        pirate_talk = eng_pir_dict[pirate_talk]
+
+    # pirate_talk = 'my'
+    # phrase_list = ['student', 'is', 'not', 'a', 'man!']
     for word in phrase_list:
+        #word = 'student'
         if word in eng_pir_dict:
-            pirate_talk = pirate_talk + eng_pir_dict[word]
+            pirate_talk = pirate_talk +  " " + eng_pir_dict[word]
+            # pirate_talk = 'my swabbie'
         else:
-            pirate_talk = pirate_talk + word
+            pirate_talk = pirate_talk + " " + word
     # " ".join(word)
 #meswabbiebenotaman!
 
     return pirate_talk
+print get_pirate_talk("my student is not a man")
 print get_pirate_talk("my student is not a man!")
+
+
+
