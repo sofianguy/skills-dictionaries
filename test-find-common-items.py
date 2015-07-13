@@ -6,7 +6,6 @@ def find_common_items(list1, list2):
 
     IMPORTANT: you may not not 'if ___ in ___' or the method 'index'.
 
-
     For example:
 
         >>> sorted(find_common_items([1, 2, 3, 4], [1, 2]))
@@ -24,11 +23,14 @@ def find_common_items(list1, list2):
         [1, 1, 2, 2]
 
     """
-    
 
+    common_items_list = []
+    for item1 in list1:
+        for item2 in list2:
+            if item1 == item2:
+                common_items_list.append(item1) #add item1 to new list
 
-
-#     combined_list = set(list1)&set(list2)
-
-#     return combined_list
-# print sorted(find_common_items([1, 1, 2, 2], [1, 2, 3, 4]))
+    return common_items_list
+print find_common_items([1, 2, 3, 4], [1, 2])
+print find_common_items([1, 2, 3, 4], [1, 1, 2, 2])
+print find_common_items([1, 1, 2, 2], [1, 2, 3, 4])
