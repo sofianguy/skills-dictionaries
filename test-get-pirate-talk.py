@@ -51,9 +51,9 @@ def get_pirate_talk(phrase):
     phrase_list = phrase.split()
     #phrase_list = ['my', 'student', 'is', 'not', 'a', 'man!']
 
-    pirate_talk = phrase_list.pop(0)
-    if pirate_talk in eng_pir_dict:
-        pirate_talk = eng_pir_dict[pirate_talk]
+    pirate_talk = phrase_list.pop(0) #returns 'my'
+    if pirate_talk in eng_pir_dict: #if 'my' in eng_pir_dict:
+        pirate_talk = eng_pir_dict[pirate_talk] #now 'my' becomes 'me'
 
     # pirate_talk = 'my'
     # phrase_list = ['student', 'is', 'not', 'a', 'man!']

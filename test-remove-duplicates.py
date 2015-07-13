@@ -15,7 +15,12 @@ def remove_duplicates(words):
         ['Rose', 'a', 'is', 'rose']
 
     """
+    
 
+
+
+
+#SOLUTION WITHOUT USING DICTIONARY
     removed_list = []
     for word in words:
         if word not in removed_list:
@@ -25,3 +30,7 @@ def remove_duplicates(words):
 
 print remove_duplicates(["rose", "is", "a", "rose", "is", "a", "rose"])
 print remove_duplicates(["Rose", "is", "a", "rose", "is", "a", "rose"])
+
+#list comprehension:
+    # removed_list = [word for word in words if word not in removed_list]
+    # ERROR: UnboundLocalError: local variable 'removed_list' referenced before assignment

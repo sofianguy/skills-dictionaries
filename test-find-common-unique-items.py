@@ -31,11 +31,6 @@ print find_unique_common_items([1, 2, 3, 4], [1, 2])
 print find_unique_common_items([1, 2, 3, 4], [1, 1, 2, 2])
 
 
-
-
-
-
-
 #SOLUTION WITHOUT USING DICTIONARY
 #     combined_list = set(list1)&set(list2)
 
