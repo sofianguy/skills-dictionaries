@@ -34,7 +34,7 @@ def get_sum_zero_pairs(input_list):
     #use set()? yes
     #use dictionary? no
 
-    results_zero_list = []
+    # results_zero_list = []
     list_to_set = set(input_list)
 
     for num in list_to_set:
@@ -43,15 +43,17 @@ def get_sum_zero_pairs(input_list):
             #if so, append pair of numbers to results_zero_list (in a list pair)
             results_zero_list.append([-num, num])
 
-
     return sorted(results_zero_list)
+    
 print get_sum_zero_pairs([1, 2, 3, -2, -1])
 print get_sum_zero_pairs([3, -3, 2, 1, -2, -1])
 print get_sum_zero_pairs([1, 2, 3, -2, -1, 1, 1])
 print get_sum_zero_pairs([1, 2, 3, -2, -1, 1, 1, 0])
 
 
-
+#list comprehension:
+    # list_to_set = set(input_list)
+    # results_zero_list = [num for num in list_to_set if num >= 0 and -num in list_to_set]
 
 #scratch paper
 # sets = set()
